@@ -1,0 +1,580 @@
+@import "variables";
+@import "media";
+
+
+@mixin bd-radius ($value){
+    border-radius: $value;
+}
+@mixin box-shadow ($top, $left, $blur, $color){
+    box-shadow: $top, $left, $blur, $color;
+}
+.font-size{
+    font-size: 50px;
+}
+//================ @media Queary start
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fontFamily;
+}
+a{
+    color: $black;
+    text-decoration: none;
+    font-family: $fontFamily;
+    font-size: 15px;
+    font-weight: 300;
+}
+ul, li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+// top header start =------------------------------------
+.top-header{
+    background-color: darken($theme1, 0);
+    color: $white;
+}
+
+.ankar i{
+    font-size: 10px;
+}
+.dropdown .ul-div{
+    padding: 12px;
+    margin-bottom: 0;
+    @extend .ul-div;
+}
+.ul-div li{
+    list-style: none;
+    font-size: 14px;
+}
+.dropdown {
+    box-shadow: 0px 0px 12px -8px lighten($black, .5);
+    width: 10%;
+    top: 13%;
+    position: absolute;
+    background: $white;
+    color: $theme1;
+    display: none;
+}
+.dropdown-2 {
+    @extend .dropdown;
+}
+.ankar:hover .dropdown{
+    display: block;
+}
+// bottom header start -======================--=-==-=-=-=-=-=-=---==
+.btn.show, .btn:first-child:active{
+    border: 1px solid lighten($theme1, 65);
+}
+.custom-select:hover{
+    @extend .custom-select;
+}
+.custom-select {
+    border-radius: 10px;
+    border: 1px solid lighten($theme1, 65);
+    color: lighten($theme1, 25);
+    padding: 12px;
+}
+.dropdown-menu li a{
+    color: lighten($theme1, 25);
+}
+.form-control {
+    border: 1px solid lighten($theme1, 65);
+    border-right: none;
+    color: lighten($theme1, 25);
+}
+.icons{
+    cursor: pointer;
+    border: 1px solid lighten($theme1, 65);
+    border-left: none;
+    border-radius: 10px;
+    color: lighten($theme1, 25);
+}
+.color-a a {
+    color: $black;
+}
+.color-a i{
+    color: lighten($shade3, 25);
+}
+.hedding-6 h6{
+    color: $theme1;
+}
+.color-a .dropdown {
+    top: 30%;
+}
+.trfor-circle i{
+    font-size: 6px;
+    font-weight: 500;
+}
+.border-d {
+    @extend .custom-select;
+}
+//********************* hero section start
+.section-hero{
+    background-color: $theme3;
+}
+.text-color {
+    color: $theme2;
+}
+.animation-img img{
+    background-color: $white;
+    border-radius: 50% 50% 0px 0px;
+}
+.section-hero h6 img{
+    vertical-align: super;
+}
+.text{
+    color: $text;
+}
+.btns {
+    border: 1px solid $black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all ease-in 0.3s;
+}
+.btns:hover{
+    background-color: $theme2;
+    color: $white;
+}
+.inner-links ul{
+    writing-mode: tb-rl;
+}
+.inner-links ul li{
+    list-style: none;
+    color: $text;
+    font-weight: 500;
+}
+.inner-links ul span{
+    margin-right: 12px;
+    transition: all 0.3s ease-in-out;
+    height: 80px;
+    width: 1px;
+    background-color: $black;
+    transform: rotate(1deg);
+}
+// About section start -============-=-=-=-=-=--==-=-=-=-=-=>????
+
+.about-img img{
+    border-radius: 25px;
+}
+.about-h1 h1{
+    font-size: 90px;
+    text-shadow:  0px 0px $text, 0px 0px $text;
+    font-weight: 900;
+    color: $white;
+}
+.swiper-img-div {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fbf9e4;
+}
+.swiper-img-div1{
+    background-color: #e1fcf2;
+    @extend .swiper-img-div;
+}
+.swiper-img-div2{
+    background-color: #f4f1fe;
+    @extend .swiper-img-div;
+}
+.swiper-img-div3{
+    background-color: #fbf9e4;
+    @extend .swiper-img-div;
+}
+.swiper-img-div4{
+    background-color: #fef1f1;
+    @extend .swiper-img-div;
+}
+.swiper-img-div5{
+    background-color: #e1fcf2;
+    @extend .swiper-img-div;
+}
+.swiper-img-div6{
+    background-color: #e1fcf2;
+    @extend .swiper-img-div;
+}
+.swiper-img-div7{
+    background-color: #e1fcf2;
+    @extend .swiper-img-div;
+}
+
+.swiper-img-div img{
+    width: 50%;
+}
+.about-swiper-div{
+    margin-left: -106px;
+    background: white;
+    padding: 45px 40px 0px 40px;
+    border-radius: 30px 30px 0px 0px;
+}
+.about-swiper-div::before{
+    content: "";
+    background-image: url('https://maraviyainfotech.com/projects/blueberry-tailwind/assets/img/category/top-shape.png');
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: -96%;
+    left: 542px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+.about-swiper-div::after{
+    content: "";
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    bottom: -834px;
+    left: 435px;
+    background-image: url('https://maraviyainfotech.com/projects/blueberry-tailwind/assets/img/category/top-shape.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.about-swiper-div img:hover{
+    transition: all  0.3s ease-out;
+    transform: scale(1.3);
+}
+.clor {
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-radius: 15px;
+}
+// inner-img start row=-----===================-=-==--=-=-==--=-=>?????
+.inner-div {
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 20px;
+}
+.inner-img {
+    position: relative;
+}
+.inner-img .img2{
+    position: absolute;
+    display: none;
+    bottom: 0;
+} 
+.inner-img:hover .img2{
+    display: block;
+}
+.inner-img:hover ul {
+    display: block;
+}
+.inner-img ul{
+    position: absolute;
+    left: 22%;
+    bottom: 20%;
+    display: none;
+}
+.inner-img .ul li:hover{
+    color: #fff;
+    background-color: $theme2;
+}
+.inner-img ul li{
+    padding: 4px 8px;
+    background: $white;
+    border-radius: 10px;
+}
+.icons-div .i{
+    color: #fea99a;
+    font-size: 15px;
+}
+// section-banner-one =--------------------------==//
+.inner-banner-div img{
+    width: 40%;
+}
+.inner-banner-div{
+    background-color: #fbf2e5;
+    border-radius: 20px;
+    padding: 30px;
+}
+.inner-banner-div2 {
+    background-color: #ffe8ee;
+    @extend .inner-banner-div;
+}
+//=-------------------banner-two-box section start
+.banner-one-img {
+    position: relative;
+}
+.banner-two-box {
+    border-radius: 30px 30px 0 0;
+    position: absolute;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: white;
+    bottom: -392%;
+    left: 60%;
+}
+.banner-two-box:before {
+    content: "";
+    background-image: url('https://maraviyainfotech.com/projects/blueberry-tailwind/assets/img/banner-two/left-shape.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    z-index: 1;
+    left: -30px;
+    bottom: 5px;
+}
+
+.banner-two-box:after {
+    content: "";
+    background-image: url('https://maraviyainfotech.com/projects/blueberry-tailwind/assets/img/banner-two/right-shape.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    z-index: 1;
+    right: -30px;
+    bottom: 5px;
+}
+// services section start   --------------------------
+.services-contact-divs {
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+// vendors start section-==-=--==-=-=-=-=-=-
+.tab-vendors-pane img{
+    border-radius: 30px;
+}
+.vendors-local-shape{
+    border-radius: 30px 0 0 0 ;
+    height: 120px;
+    width: 120px;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    top: 61%;
+    left: 33%;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.vendors-local-shape .inner-shape:before {
+    content: "";
+    background-image: url('https://maraviyainfotech.com/projects/blueberry-tailwind/assets/img/banner-two/left-shape.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    top: -30px;
+}
+.vendors-local-shape .inner-shape:after {
+    content: "";
+    background-image: url('https://maraviyainfotech.com/projects/blueberry-tailwind/assets/img/banner-two/left-shape.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    z-index: 1;
+    left: -30px;
+    bottom: 10px;
+}
+.nav-pills .nav-link {
+    display: block;
+    padding: 30px;
+    border: 1px solid #eee;
+    color: #4e4b4b;
+    text-decoration: none;
+    background: #f8f8fb;
+    border-radius: 30px;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: $theme2;
+    border: 1px solid #6c7fd8;
+    background: #f8f8fb;
+}
+.bb-vendors-box {
+    text-align: left;
+}
+// section-testimonials start=-==-==--==--=-==-===--==-
+.font-quicksand{
+    writing-mode: tb;
+    position: absolute;
+    top: 5%;
+    text-shadow: 1px 1px #eae6e3, -1px 1px #eae6e3, 1px -1px #eae6e3, -1px -1px #eae6e3;
+}
+.font-quicksand h2{
+    color: $white;
+    font-weight: 900;
+    font-size: 40px;
+}
+.section-testimonials {
+    position: relative;
+}
+.bb-testimonials1{
+    transform: rotate(-20deg);
+    position: absolute;
+    border-radius: 15px;
+    top: -30%;
+    left: 13%;
+    width: 5%;
+}
+.bb-testimonials2{
+    @extend .bb-testimonials1;
+    transform: rotate(20deg);
+    top: 40%;
+    left: 0%;
+    filter: blur(3px);
+}
+.bb-testimonials3{
+    @extend .bb-testimonials1;
+    transform: rotate(-20deg);
+    filter: blur(3px);
+    top: -30%;
+    left: 45%;
+}
+.bb-testimonials4{
+    @extend .bb-testimonials1;
+    transform: rotate(15deg);
+    top: -10%;
+    left: 70%;
+
+}
+.bb-testimonials5{
+    @extend .bb-testimonials1;
+    transform: rotate(0deg);
+    top: -6%;
+    left: 85%;
+    filter: blur(3px)
+}
+.bb-testimonials6{
+    @extend .bb-testimonials1;
+    transform: rotate(-20deg);
+    top: 50%;
+    left: 86%;
+}
+.inner-contacts {
+    width: 85%;
+    background-color: $white;
+    margin-top: 15px;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 25px;
+}
+.testimonials-image img{
+    border-radius: 20px;
+}
+.testimonials-image{
+    width: 60%;
+    padding-left: 60px;
+}
+// blog section start--------------
+.blog-img img{
+    border-radius: 40px;
+}
+.owl-item:hover img{
+    overflow: hidden;
+    transform: rotate(6deg);
+    transition: all 0.5s ease-in;
+}
+.blog-contact{
+    cursor: pointer;
+    width: 96%;
+    margin-top: 150px;
+    position: absolute;
+    left: 2%;
+    background: #ffffffe6;
+    padding: 14px;
+    border-radius: 25px;
+    transition:.5s ease;
+}
+.foreground{
+    transition: all ease-in 0.5s;
+
+}
+// 0----------------------------
+.card{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+}
+.card:hover .foreground{
+    transform: scale(1.2);
+}
+// Instagram=------------------------------------------------
+.instagram-img img{
+    border-radius: 30px;
+}
+.bb-instagram-card .instagram-img::before {
+    transition: all 0.3s ease-in-out;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #00000080;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    border-radius: 30px;
+}
+.bb-instagram-card .instagram-img::after {
+    transition: all 0.3s ease-in-out;
+    content: '@';
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    font-size: 38px;
+    color: #fff;
+    -webkit-transform: scale(3) rotate(50deg);
+    transform: scale(3) rotate(50deg);
+}
+.bb-instagram-card .instagram-img:hover:before {
+    opacity: 1;
+}
+.bb-instagram-card .instagram-img:hover:after {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+.bb-title {
+    position: absolute;
+    left: 20%;
+    margin-top: -108px;
+    background: aliceblue;
+    width: 60%;
+    padding: 9px;
+    border-radius: 30px;
+    text-align: center;
+}
+// bb-footer=--------------------------
+.bb-footer {
+    background-color: #f8f8fb;
+    border: 1px solid #e5e7eb;
+}
+.footer-img img{
+    width: 40%;
+    border-radius: 4px;
+}
+.footer-icon li a{
+    background-color: #3d4557;
+    color: $white;
+    padding: 6px 8px;
+    border-radius: 5px;
+    transition: all ease-in 0.3s;
+}
+.footer-icon li a:hover {
+    background-color: #6c7fd8;
+}
+.ul-footer a:hover{
+    color: #6c7fd8;
+}
